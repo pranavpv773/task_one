@@ -1,0 +1,17 @@
+class ApiEndPoints {
+  // Api end points //
+
+  static String baseUrl =
+      "https://asia-southeast1-marlo-bank-dev.cloudfunctions.net/api_dev/";
+  static String inviteProcessUrl =
+      "$inviteUrl/0420f789-cd4b-40e3-bd63-c0d16ec04c00";
+  static String inviteUrl = "${baseUrl}invites";
+  static String teamUrl =
+      "${baseUrl}company/6dc9858b-b9eb-4248-a210-0f1f08463658/teams";
+
+  // Token Strings //
+  static String token =
+      "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk3OGI1NmM2NmVhYmIwZDlhNmJhOGNhMzMwMTU2NGEyMzhlYWZjODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWFybG8tYmFuay1kZXYiLCJhdWQiOiJtYXJsby1iYW5rLWRldiIsImF1dGhfdGltZSI6MTY3MTA4NzI1MCwidXNlcl9pZCI6IlJoSGdiY1U0cHZNMGR3RE90d1piTlhPOTlRMjMiLCJzdWIiOiJSaEhnYmNVNHB2TTBkd0RPdHdaYk5YTzk5UTIzIiwiaWF0IjoxNjcxMDg3MjUwLCJleHAiOjE2NzEwOTA4NTAsImVtYWlsIjoieGlob2g1NTQ5NkBkaW5lcm9hLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ4aWhvaDU1NDk2QGRpbmVyb2EuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.eXzUSe0_tzyfN1w4Ddl6OqhQb6Ff5S2R3YvYzJQVQZD7HvqbpHye0EO9V1sINJ0150M7R39gN7lwbdErfouVuq881FMSpB37HnKQ5qgJQgKPqP6NYbisW0tvjkxuytyhjy0TSAB7K3o5qCfsxAv2Q_rHoAKVBxh-ATikiNvgt0_kWbTWAJhFWLSg11caCQBfWI5126pzsKm67GjtCOa4UYmpQPrj2CrmMLs8tsBZtpE02sWh1PF5hvBQw5IwiOQxn6gUm--MhxNVaLNKo1utKPcxc8pT3fYfuL5dfT4G8KaMl5Jvjg9C9t4P_LAjQ4a4dq-0LNP3snV2ck6wcBqUbA";
+  static String refreshToken =
+      "AOkPPWTrp6OtEyCi008gkDWVaURZRrqPmZuDMvrHix9N6Vjoc3HYp0tjWOoRMGaVIxzE899gGsM5xgpM9JyuoJKXHgEGwZAopgKWFleK8vyQ9W_MWNv8U5ta7Ryh7w0VIB7pYZgK0wC1YvA4A1sKtGU6SN0IrlLRkFTC1cyWJ17tk-FobfhsiXNTOOXFrvu3uWlVy5i9GA3W5MANoMFag0OripjMjVwt_g";
+}

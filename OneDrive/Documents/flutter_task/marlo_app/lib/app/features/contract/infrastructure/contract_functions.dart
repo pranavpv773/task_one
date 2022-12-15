@@ -1,0 +1,3 @@
+class ContractFunctions {
+  fetchTeamFn() async {}
+}
