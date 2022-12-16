@@ -3,6 +3,7 @@ import 'package:marlo_app/app/features/login/presentation/widgets/continue_butto
 import 'package:marlo_app/app/features/login/presentation/widgets/textformswidget.dart';
 import 'package:marlo_app/app/features/on_boarding/presentation/widgets/appbar.dart';
 import 'package:marlo_app/app/utils/app_styles.dart';
+import 'package:marlo_app/app/utils/routes.dart';
 
 class OnboardCountry extends StatelessWidget {
   const OnboardCountry({super.key});
@@ -36,7 +37,9 @@ class OnboardCountry extends StatelessWidget {
                 ),
               ],
             ),
-            const ContinueButton()
+            ContinueButton(
+              routeName: AppRoute.onBoardMobRoute,
+            ),
           ],
         ),
       ),

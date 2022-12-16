@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:marlo_app/app/features/contract/presentation/screen_three_profile/widgets/disabled_textform.dart';
+import 'package:marlo_app/app/features/contract/presentation/screen_two/widgets/disabled_textform.dart';
 import 'package:marlo_app/app/features/login/presentation/widgets/continue_button.dart';
 import 'package:marlo_app/app/features/login/presentation/widgets/textformswidget.dart';
-import 'package:marlo_app/app/utils/app_colors.dart';
 import 'package:marlo_app/app/utils/app_styles.dart';
+import 'package:marlo_app/app/utils/routes.dart';
 
 import 'widgets/appbar_widget.dart';
 
@@ -40,7 +40,7 @@ class InviteScreen extends StatelessWidget {
                   )
                 ],
               ),
-              ContinueButton(),
+              ContinueButton(routeName: AppRoute.onBoardMobRoute),
             ],
           ),
         ),

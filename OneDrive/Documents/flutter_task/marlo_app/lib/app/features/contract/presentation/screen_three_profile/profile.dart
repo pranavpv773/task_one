@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_two/widgets/appbar_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -8,10 +6,13 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    return Scaffold(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(50),
         child: AppBarWidget(),
+      ),
+      body: Column(
+        children: const [],
       ),
     );
   }

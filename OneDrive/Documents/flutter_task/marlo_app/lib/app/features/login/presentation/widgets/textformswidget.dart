@@ -5,10 +5,14 @@ class TextformFieldWidget extends StatelessWidget {
   const TextformFieldWidget({
     Key? key,
     required this.title,
+    this.controller,
+    this.obsecure,
     this.icon1,
   }) : super(key: key);
   final String title;
   final Widget? icon1;
+  final bool? obsecure;
+  final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,6 +24,8 @@ class TextformFieldWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextFormField(
+          controller: controller,
+          obscureText: obsecure ?? false,
           keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
             fillColor: AppColors.secondary.withOpacity(0.02),

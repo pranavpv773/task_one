@@ -1,12 +1,12 @@
 part of 'contract_bloc_bloc.dart';
 
 @freezed
-class ContractBlocState with _$ContractBlocState {
-  factory ContractBlocState({
+class ContractState with _$ContractState {
+  const factory ContractState({
     required List<TeamModel> teamModel,
     required bool isLoading,
-  }) = _ContractBlocState;
-
-  factory ContractBlocState.initial() =>
-      ContractBlocState(teamModel: [], isLoading: false);
+    required bool isError,
+  }) = _ContractState;
+  factory ContractState.initial() =>
+      const ContractState(teamModel: [], isLoading: false, isError: false);
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
+import 'package:marlo_app/app/utils/app_styles.dart';
 
 class BodyWidget extends StatelessWidget {
   const BodyWidget({
@@ -23,9 +24,7 @@ class BodyWidget extends StatelessWidget {
           ),
           Text(
             "MARLO",
-            style: TextStyle(
-              fontSize: 16,
-              letterSpacing: 8,
+            style: AppTextStyle.header.copyWith(
               color: AppColors.klight,
             ),
           )

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1001994004565",
+    "project_id": "marlo-39132",
+    "storage_bucket": "marlo-39132.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001994004565:android:ec412558d04b9134e80cdc",
+        "android_client_info": {
+          "package_name": "com.example.marlo_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001994004565-vri7qqe2pa31rlvvv1v560e37j11gmuc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2-ooEmQQOp_5YF9OcbUYuXCYvvop2oFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001994004565-vri7qqe2pa31rlvvv1v560e37j11gmuc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

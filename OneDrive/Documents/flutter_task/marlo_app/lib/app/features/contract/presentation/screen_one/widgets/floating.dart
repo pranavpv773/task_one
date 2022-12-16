@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marlo_app/app/utils/routes.dart';
 
 class FloatingButtonWIdget extends StatelessWidget {
   const FloatingButtonWIdget({
@@ -11,7 +12,12 @@ class FloatingButtonWIdget extends StatelessWidget {
       onPressed: () {},
       child: IconButton(
         icon: const Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(
+            context,
+            AppRoute.inviteRoute,
+          );
+        },
       ),
     );
   }

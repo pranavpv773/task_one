@@ -11,21 +11,18 @@ class TitleAppbarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leadingWidth: 10,
-      backgroundColor: AppColors.klight,
       elevation: 0,
       title: Text(
         title,
-        style: TextStyle(
-          color: AppColors.kDark,
-        ),
       ),
       leading: IconButton(
         splashRadius: 20,
-        splashColor: AppColors.primary,
-        onPressed: () {},
-        icon: Icon(
+        splashColor: AppColors.secondary,
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: const Icon(
           Icons.arrow_back_ios,
-          color: AppColors.kDark,
         ),
       ),
     );

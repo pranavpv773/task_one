@@ -9,15 +9,15 @@ class AppbarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.klight,
       elevation: 0,
       leading: IconButton(
         splashRadius: 20,
         splashColor: AppColors.primary,
-        onPressed: () {},
-        icon: Icon(
+        onPressed: () {
+          // Navigator.pop(context);
+        },
+        icon: const Icon(
           Icons.arrow_back_ios,
-          color: AppColors.kDark,
         ),
       ),
     );

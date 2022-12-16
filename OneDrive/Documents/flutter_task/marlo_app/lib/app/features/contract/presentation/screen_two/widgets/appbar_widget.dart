@@ -13,11 +13,10 @@ class AppBarWidget extends StatelessWidget {
         splashRadius: 20,
         splashColor: AppColors.primary,
         onPressed: () {
-          //  AppRoutes.backScreen();
+          Navigator.pop(context);
         },
         icon: Icon(
           Icons.arrow_back_ios,
-          color: AppColors.kDark,
         ),
       ),
     );

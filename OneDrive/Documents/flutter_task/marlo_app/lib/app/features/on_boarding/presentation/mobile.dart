@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marlo_app/app/features/login/presentation/widgets/continue_button.dart';
 import 'package:marlo_app/app/utils/app_styles.dart';
+import 'package:marlo_app/app/utils/routes.dart';
 
 import 'widgets/appbar.dart';
 
@@ -34,7 +35,9 @@ class MobileOnBoard extends StatelessWidget {
                 ),
               ],
             ),
-            const ContinueButton()
+            ContinueButton(
+              routeName: AppRoute.splashRoute,
+            ),
           ],
         ),
       ),
