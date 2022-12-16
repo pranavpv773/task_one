@@ -43,7 +43,7 @@ class LoginNotifier with ChangeNotifier {
           password: password.text.trim(),
         )
             .then((value) {
-          Navigator.pushNamed(context, AppRoute.homeRoute);
+          Navigator.pushNamed(context, AppRoute.globalRoute);
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text("Success"),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:injectable/injectable.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_one/widgets/row_title_widget.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
 
@@ -61,7 +60,7 @@ class Body extends StatelessWidget {
             ),
           ),
         ),
-        ActionSection(),
+        const ActionSection(),
         const RowTitleWidgets(
           title: "Recent Transactions",
         ),
@@ -88,7 +87,7 @@ class ActionSection extends StatelessWidget {
         ),
         height: 100,
         child: ListTile(
-          contentPadding: EdgeInsets.all(10),
+          contentPadding: const EdgeInsets.all(10),
           title: Text(
             "Action required",
             style: TextStyle(color: AppColors.klight),
@@ -100,10 +99,10 @@ class ActionSection extends StatelessWidget {
           trailing: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              ElevatedButton(onPressed: () {}, child: Text("Complete")),
+              ElevatedButton(onPressed: () {}, child: const Text("Complete")),
             ],
           ),
         ),

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_two/bloc/invite_bloc.dart';
 import 'package:marlo_app/app/features/global/presentation/bloc/global_bloc.dart';
-import 'package:marlo_app/app/features/global/presentation/global_screen.dart';
 import 'package:marlo_app/app/features/home/bloc/home_bloc.dart';
 import 'package:marlo_app/app/features/login/presentation/provider/login_notifier.dart';
+import 'package:marlo_app/app/features/splash/presentation/splash.dart';
 import 'package:marlo_app/app/utils/app_theme/app_themes.dart';
 import 'package:marlo_app/app/utils/important_files.dart';
 import 'package:marlo_app/app/utils/routes.dart';
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
           onGenerateRoute: AppRoute.generateRoute,
           debugShowCheckedModeBanner: false,
           theme: CustomTheme.of(context),
-          home: GlobalScreen(),
+          home: const SplashScreen(),
         ),
       ),
     );

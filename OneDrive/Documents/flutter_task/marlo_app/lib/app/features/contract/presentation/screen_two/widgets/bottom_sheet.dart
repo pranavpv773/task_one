@@ -26,46 +26,47 @@ class BottomSheetWidget extends StatelessWidget {
               height: 20,
             ),
             ListView.builder(
-                shrinkWrap: true,
-                itemCount: InviteFuctions.roles.length,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        context
-                            .read<InviteBloc>()
-                            .add(InviteEvent.changeRole(index));
-                        Navigator.pop(context);
-                      },
-                      child: BlocBuilder<InviteBloc, InviteState>(
-                        builder: (context, state) {
-                          return Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: state.role == InviteFuctions.roles[index]
-                                  ? AppColors.primaryShade
-                                  : AppColors.klight,
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  InviteFuctions.roles[index].toString(),
-                                  style: AppTextStyle.h2.copyWith(
-                                    color: AppColors.secondary,
-                                  ),
+              shrinkWrap: true,
+              itemCount: InviteFuctions.roles.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      context
+                          .read<InviteBloc>()
+                          .add(InviteEvent.changeRole(index));
+                      Navigator.pop(context);
+                    },
+                    child: BlocBuilder<InviteBloc, InviteState>(
+                      builder: (context, state) {
+                        return Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: state.role == InviteFuctions.roles[index]
+                                ? AppColors.primaryShade
+                                : AppColors.klight,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                InviteFuctions.roles[index].toString(),
+                                style: AppTextStyle.h2.copyWith(
+                                  color: AppColors.secondary,
                                 ),
                               ),
                             ),
-                          );
-                        },
-                      ),
+                          ),
+                        );
+                      },
                     ),
-                  );
-                }),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),

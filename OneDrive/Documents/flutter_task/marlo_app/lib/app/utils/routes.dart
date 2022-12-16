@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_two/invite.dart';
+import 'package:marlo_app/app/features/global/presentation/global_screen.dart';
 import 'package:marlo_app/app/features/home/presentation/home.dart';
 import 'package:marlo_app/app/features/login/presentation/login_screen.dart';
 import 'package:marlo_app/app/features/on_boarding/presentation/country.dart';
@@ -11,6 +12,7 @@ class AppRoute {
 //-------Strings-------//
 
   static String loginRoute = '/login';
+  static String globalRoute = '/global';
   static String splashRoute = '/splash';
   static String homeRoute = '/home';
   static String onBoardRoute = '/onBoard';
@@ -49,6 +51,10 @@ class AppRoute {
       case '/invite':
         return MaterialPageRoute(
           builder: (context) => const InviteScreen(),
+        );
+      case '/global':
+        return MaterialPageRoute(
+          builder: (context) => GlobalScreen(),
         );
       default:
         return errorRoute();

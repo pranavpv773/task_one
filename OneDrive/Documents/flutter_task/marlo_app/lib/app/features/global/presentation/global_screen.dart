@@ -6,8 +6,6 @@ import 'package:marlo_app/app/features/contract/presentation/screen_one/screen_o
 import 'package:marlo_app/app/features/dashboard/presentation/dasboard.dart';
 import 'package:marlo_app/app/features/loan/loan_screen.dart';
 import 'package:marlo_app/app/features/teams/presentation/teams.dart';
-
-import '../../chart/presentation/chart.dart';
 import '../../home/presentation/home.dart';
 import 'bloc/global_bloc.dart';
 import 'widgets/bottom_nav.dart';

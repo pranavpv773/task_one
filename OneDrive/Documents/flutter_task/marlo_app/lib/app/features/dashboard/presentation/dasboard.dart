@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marlo_app/app/features/contract/presentation/screen_one/widgets/rect_avathar_container.dart';
-import 'package:marlo_app/app/utils/app_colors.dart';
-
 import 'widgets/appbar.dart';
 import 'widgets/body.dart';
 
