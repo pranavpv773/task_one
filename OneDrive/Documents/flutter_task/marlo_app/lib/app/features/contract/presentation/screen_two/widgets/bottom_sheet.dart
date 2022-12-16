@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marlo_app/app/features/contract/infrastructure/screen_two_functions.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_two/bloc/invite_bloc.dart';
@@ -20,7 +18,13 @@ class BottomSheetWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Team roles"),
+            Text(
+              "Team roles",
+              style: AppTextStyle.h1.copyWith(fontSize: 16),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
             ListView.builder(
                 shrinkWrap: true,
                 itemCount: InviteFuctions.roles.length,
@@ -34,27 +38,30 @@ class BottomSheetWidget extends StatelessWidget {
                             .add(InviteEvent.changeRole(index));
                         Navigator.pop(context);
                       },
-                      child: Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: InviteFuctions.roleCntrl.text ==
-                                  InviteFuctions.roles[index]
-                              ? AppColors.primary
-                              : AppColors.klight,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              InviteFuctions.roles[index].toString(),
-                              style: AppTextStyle.h2.copyWith(
-                                color: AppColors.secondary,
+                      child: BlocBuilder<InviteBloc, InviteState>(
+                        builder: (context, state) {
+                          return Container(
+                            height: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: state.role == InviteFuctions.roles[index]
+                                  ? AppColors.primaryShade
+                                  : AppColors.klight,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 8.0),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  InviteFuctions.roles[index].toString(),
+                                  style: AppTextStyle.h2.copyWith(
+                                    color: AppColors.secondary,
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ),
+                          );
+                        },
                       ),
                     ),
                   );

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_one/screen_one.dart';
+import 'package:marlo_app/app/features/dashboard/presentation/dasboard.dart';
 import 'package:marlo_app/app/features/loan/loan_screen.dart';
 import 'package:marlo_app/app/features/teams/presentation/teams.dart';
 
@@ -14,11 +15,11 @@ import 'widgets/bottom_nav.dart';
 class GlobalScreen extends StatelessWidget {
   GlobalScreen({Key? key}) : super(key: key);
   List pages = [
-    const HomeScreen(),
+    const DashboardScreen(),
     const LoanScreen(),
     const ContractScreenOne(),
     const TeamScreen(),
-    const ChartScreen(),
+    const HomeScreen(),
   ];
   @override
   Widget build(BuildContext context) {

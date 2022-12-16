@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iconify_flutter/iconify_flutter.dart';
-import 'package:iconify_flutter/icons/ri.dart';
 import 'package:marlo_app/app/features/contract/infrastructure/screen_two_functions.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_two/bloc/invite_bloc.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
@@ -26,18 +24,23 @@ class DisabledTextformFieldWidget extends StatelessWidget {
           color: AppColors.secondary.withOpacity(0.1),
         ),
         child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                BlocBuilder<InviteBloc, InviteState>(
-                  builder: (context, state) {
-                    return Text(state.role);
-                  },
-                ),
-                Icon(Icons.arrow_drop_down),
-              ],
-            )),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              BlocBuilder<InviteBloc, InviteState>(
+                builder: (context, state) {
+                  return Text(
+                    state.role,
+                  );
+                },
+              ),
+              const Icon(
+                Icons.arrow_drop_down,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

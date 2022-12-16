@@ -1,7 +1,5 @@
 import 'dart:developer';
-
-import 'package:bloc/bloc.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:marlo_app/app/features/contract/infrastructure/screen_two_functions.dart';
 

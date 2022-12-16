@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_one/bloc/contract_bloc_bloc.dart';
-import 'package:marlo_app/app/features/contract/presentation/screen_one/screen_one.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
-import 'package:marlo_app/app/utils/app_theme/app_themes.dart';
+
+import 'rect_avathar_container.dart';
+import 'row_title_widget.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -21,24 +22,8 @@ class Body extends StatelessWidget {
             : SingleChildScrollView(
                 physics: const ScrollPhysics(),
                 child: Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        BlocBuilder<ContractBloc, ContractState>(
-                          builder: (context, state) {
-                            return Text("All People • 2");
-                          },
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            "See all",
-                          ),
-                        )
-                      ],
-                    ),
+                  const RowTitleWidgets(
+                    title: "All People • 2",
                   ),
                   SizedBox(
                     child: ListView.builder(
@@ -47,23 +32,13 @@ class Body extends StatelessWidget {
                       itemBuilder: (context, index) {
                         //  final datas = context.read<ContractBlocBloc>().;
                         return ListTile(
-                          leading: Container(
-                            width: 50,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(10)),
-                              color: AppColors.peopleAvathar,
-                            ),
-                            child: Center(
-                              child: Text(
-                                "PV",
-                              ),
-                            ),
+                          leading: RectContainer(
+                            title: "PV",
+                            color: AppColors.peopleAvathar,
                           ),
-                          title: Text("Pranav"),
-                          subtitle: Text("Inactive"),
-                          trailing: Text("Admin"),
+                          title: const Text("Pranav"),
+                          subtitle: const Text("Inactive"),
+                          trailing: const Text("Admin"),
                         );
                       },
                     ),
@@ -75,7 +50,7 @@ class Body extends StatelessWidget {
                       children: [
                         BlocBuilder<ContractBloc, ContractState>(
                           builder: (context, state) {
-                            return Text("Invited People •3");
+                            return const Text("Invited People •3");
                           },
                         ),
                         TextButton(
@@ -101,12 +76,12 @@ class Body extends StatelessWidget {
                                   const BorderRadius.all(Radius.circular(10)),
                               color: AppColors.inviteAvathar,
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text("VP"),
                             ),
                           ),
-                          title: Text("Pranav"),
-                          subtitle: Text("PV"),
+                          title: const Text("Pranav"),
+                          subtitle: const Text("PV"),
                         );
                       },
                     ),

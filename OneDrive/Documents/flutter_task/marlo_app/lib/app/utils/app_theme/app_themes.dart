@@ -14,8 +14,6 @@ class MyThemes {
     primaryColor: AppColors.klight,
     appBarTheme: AppBarTheme(
       titleTextStyle: TextStyle(color: AppColors.kDark),
-      //   color: AppColors.kDark,
-      // ),
       elevation: 0,
       color: AppColors.klight,
     ),
@@ -28,9 +26,12 @@ class MyThemes {
       focusColor: Colors.blueAccent,
       splashColor: AppColors.primary,
     ),
-    textSelectionTheme:
-        const TextSelectionThemeData(selectionColor: Colors.black),
-    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
+    textSelectionTheme: const TextSelectionThemeData(
+      selectionColor: Colors.black,
+    ),
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      secondary: Colors.white,
+    ),
   );
 
   //-----------------------Dark THeme----------------------------//
@@ -39,7 +40,9 @@ class MyThemes {
     scaffoldBackgroundColor: AppColors.kDark,
     appBarTheme: AppBarTheme(
       color: AppColors.kDark,
-      titleTextStyle: TextStyle(color: AppColors.klight),
+      titleTextStyle: TextStyle(
+        color: AppColors.klight,
+      ),
       elevation: 0,
     ),
     primaryColor: AppColors.kDark,
@@ -53,10 +56,13 @@ class MyThemes {
       splashColor: AppColors.primary,
     ),
     checkboxTheme: CheckboxThemeData(
-      checkColor: MaterialStateProperty.all(AppColors.klight),
+      checkColor: MaterialStateProperty.all(
+        AppColors.klight,
+      ),
     ),
-    textSelectionTheme:
-        const TextSelectionThemeData(selectionColor: Colors.grey),
+    textSelectionTheme: const TextSelectionThemeData(
+      selectionColor: Colors.grey,
+    ),
   );
 
   //-----------------------Get Theme Function----------------------------//

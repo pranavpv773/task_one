@@ -35,12 +35,16 @@ class InviteScreen extends StatelessWidget {
                     title: "Bussiness email",
                   ),
                   const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                    padding: EdgeInsets.symmetric(
+                      vertical: 8.0,
+                    ),
                     child: DisabledTextformFieldWidget(),
                   )
                 ],
               ),
-              ContinueButton(routeName: AppRoute.onBoardMobRoute),
+              ContinueButton(
+                routeName: AppRoute.onBoardMobRoute,
+              ),
             ],
           ),
         ),

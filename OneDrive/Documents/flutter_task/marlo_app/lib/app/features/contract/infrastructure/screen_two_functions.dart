@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_two/widgets/bottom_sheet.dart';
-import 'package:marlo_app/app/utils/app_colors.dart';
-import 'package:marlo_app/app/utils/app_styles.dart';
 
 class InviteFuctions {
   static final emailCntrl = TextEditingController();
