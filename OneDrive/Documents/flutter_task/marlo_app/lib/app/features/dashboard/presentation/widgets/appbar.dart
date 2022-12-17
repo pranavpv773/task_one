@@ -12,7 +12,13 @@ class AppBarWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
       child: AppBar(
-        leading: const RectContainer(title: "JB", color: Colors.amber),
+        leadingWidth: 50,
+        leading: const RectContainer(
+          title: "JB",
+          color: Colors.amber,
+          width: 30,
+          height: 10,
+        ),
         actions: [
           Icon(
             Icons.notifications,

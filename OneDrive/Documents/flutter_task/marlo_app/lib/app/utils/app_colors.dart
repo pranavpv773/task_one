@@ -9,6 +9,7 @@ class AppColors {
   static Color klightBlue = const Color(0xffC8D8E4);
   static Color primary = const Color(0xff0CABDF);
   static Color primaryShade = const Color.fromARGB(255, 120, 219, 253);
+  static Color cardBackround = const Color(0xff177370);
 
   static Color secondary = const Color(0xff75808A);
   static Color peopleAvathar = const Color(0xff1A62C6);
