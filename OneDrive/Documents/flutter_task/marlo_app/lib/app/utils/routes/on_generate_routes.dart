@@ -3,23 +3,13 @@ import 'package:marlo_app/app/features/contract/presentation/screen_two/invite.d
 import 'package:marlo_app/app/features/global/presentation/global_screen.dart';
 import 'package:marlo_app/app/features/home/presentation/home.dart';
 import 'package:marlo_app/app/features/login/presentation/login_screen.dart';
+import 'package:marlo_app/app/features/new_dashboard/presentation/dasboard_new.dart';
 import 'package:marlo_app/app/features/on_boarding/presentation/country.dart';
 import 'package:marlo_app/app/features/on_boarding/presentation/mobile.dart';
 import 'package:marlo_app/app/features/on_boarding/presentation/on_boarding.dart';
 import 'package:marlo_app/app/features/splash/presentation/splash.dart';
 
-class AppRoute {
-//-------Strings-------//
-
-  static String loginRoute = '/login';
-  static String globalRoute = '/global';
-  static String splashRoute = '/splash';
-  static String homeRoute = '/home';
-  static String onBoardRoute = '/onBoard';
-  static String onBoardMobRoute = '/onBoardMob';
-  static String inviteRoute = '/invite';
-  static String onBoardCountryRoute = '/onBoardCountry';
-
+class OnGenerateRoute {
 //-------Route Switch case-------//
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -55,6 +45,10 @@ class AppRoute {
       case '/global':
         return MaterialPageRoute(
           builder: (context) => GlobalScreen(),
+        );
+      case '/new_dashBoard':
+        return MaterialPageRoute(
+          builder: (context) => const DashBoardNew(),
         );
       default:
         return errorRoute();

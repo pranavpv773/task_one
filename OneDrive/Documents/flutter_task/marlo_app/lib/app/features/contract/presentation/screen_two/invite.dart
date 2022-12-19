@@ -3,7 +3,7 @@ import 'package:marlo_app/app/features/contract/presentation/screen_two/widgets/
 import 'package:marlo_app/app/features/login/presentation/widgets/continue_button.dart';
 import 'package:marlo_app/app/features/login/presentation/widgets/textformswidget.dart';
 import 'package:marlo_app/app/utils/app_styles.dart';
-import 'package:marlo_app/app/utils/routes.dart';
+import 'package:marlo_app/app/utils/routes/routes.dart';
 
 import 'widgets/appbar_widget.dart';
 

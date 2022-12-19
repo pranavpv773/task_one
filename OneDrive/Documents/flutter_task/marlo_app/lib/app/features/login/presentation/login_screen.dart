@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marlo_app/app/features/login/presentation/provider/login_notifier.dart';
 import 'package:marlo_app/app/features/login/presentation/widgets/textformswidget.dart';
 import 'package:marlo_app/app/utils/app_styles.dart';
-import 'package:marlo_app/app/utils/routes.dart';
+import 'package:marlo_app/app/utils/routes/routes.dart';
 import 'package:provider/provider.dart';
 
 import 'widgets/appbar_widget.dart';

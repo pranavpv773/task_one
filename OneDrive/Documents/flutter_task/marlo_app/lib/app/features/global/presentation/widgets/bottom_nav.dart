@@ -4,10 +4,12 @@ import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/bx.dart';
 import 'package:iconify_flutter/icons/fa6_solid.dart';
 import 'package:iconify_flutter/icons/fluent_emoji_high_contrast.dart';
+import 'package:iconify_flutter/icons/material_symbols.dart';
 import 'package:iconify_flutter/icons/ph.dart';
 import 'package:iconify_flutter/icons/uil.dart';
 import 'package:marlo_app/app/features/global/presentation/bloc/global_bloc.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
+import 'package:marlo_app/app/utils/app_styles.dart';
 
 class BottomNavWidget extends StatelessWidget {
   const BottomNavWidget({
@@ -24,10 +26,12 @@ class BottomNavWidget extends StatelessWidget {
           items: [
             BottomNavigationBarItem(
               icon: Iconify(
+                context.watch<GlobalBloc>().state.currentIndex == 0
+                    ? MaterialSymbols.home_rounded
+                    : Bx.home_alt,
                 color: context.watch<GlobalBloc>().state.currentIndex == 0
                     ? AppColors.primary
                     : AppColors.secondary,
-                Bx.home_alt,
               ),
               label: "Home",
             ),
@@ -68,6 +72,10 @@ class BottomNavWidget extends StatelessWidget {
               label: "Chart",
             ),
           ],
+          unselectedLabelStyle:
+              AppTextStyle.h5.copyWith(fontSize: 10, height: 1.5),
+          selectedLabelStyle:
+              AppTextStyle.h5.copyWith(fontSize: 10, height: 1.5),
           currentIndex: state.currentIndex,
           showUnselectedLabels: true,
           selectedItemColor: AppColors.primary,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:iconify_flutter/iconify_flutter.dart';
-import 'package:iconify_flutter/icons/material_symbols.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
+
+import 'transaction_card.dart';
 
 class RecentTransactionBuilder extends StatelessWidget {
   const RecentTransactionBuilder({
@@ -17,7 +17,7 @@ class RecentTransactionBuilder extends StatelessWidget {
         itemCount: 3,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 1.0, vertical: 0),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
@@ -30,42 +30,8 @@ class RecentTransactionBuilder extends StatelessWidget {
                 child: Material(
                   elevation: 1,
                   shadowColor: AppColors.kDark,
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    width: 200,
-                    height: 100,
-                    child: Center(
-                      child: ListTile(
-                        leading: Container(
-                          decoration: BoxDecoration(
-                            color: AppColors.cardBackround,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          width: 50,
-                          height: 50,
-                          child: Center(
-                            child: Iconify(
-                              MaterialSymbols.arrow_outward_rounded,
-                              color: AppColors.klight,
-                            ),
-                          ),
-                        ),
-                        title: const Text(
-                          "Rent",
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
-                        ),
-                        subtitle: const Text("Sat • 16-jul • 9.00 pm"),
-                        trailing: const Text(
-                          "-\u{0024}850.00",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                      ),
-                    ),
-                  ),
+                  borderRadius: BorderRadius.circular(10),
+                  child: const TransactionCard(),
                 ),
               ),
             ),

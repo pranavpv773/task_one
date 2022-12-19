@@ -1,8 +1,11 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:marlo_app/app/utils/routes.dart';
+import 'package:marlo_app/app/utils/routes/routes.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginNotifier with ChangeNotifier {
   final email = TextEditingController();
@@ -42,15 +45,18 @@ class LoginNotifier with ChangeNotifier {
           email: email.text.trim(),
           password: password.text.trim(),
         )
-            .then((value) {
-          Navigator.pushNamed(context, AppRoute.globalRoute);
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text("Success"),
-            ),
-          );
-        });
-
+            .then(
+          (value) async {
+            final sharedPrefference = await SharedPreferences.getInstance();
+            sharedPrefference.setBool("login", true);
+            Navigator.pushNamed(context, AppRoute.globalRoute);
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text("Success"),
+              ),
+            );
+          },
+        );
         disposeCntrl();
       } on FirebaseAuthException catch (e) {
         ScaffoldMessenger.of(context).showSnackBar(

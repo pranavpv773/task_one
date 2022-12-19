@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 //App TextStyle//
@@ -21,9 +22,13 @@ class AppTextStyle {
     fontSize: 16,
   );
   static TextStyle h4 = TextStyle(
-    fontFamily: GoogleFonts.heebo().fontFamily,
     letterSpacing: 0.1,
     fontWeight: FontWeight.w400,
-    fontSize: 14,
+    fontSize: 14.sp,
+  );
+  static TextStyle h5 = TextStyle(
+    letterSpacing: 0.1,
+    fontWeight: FontWeight.w400,
+    fontSize: 12.sp,
   );
 }

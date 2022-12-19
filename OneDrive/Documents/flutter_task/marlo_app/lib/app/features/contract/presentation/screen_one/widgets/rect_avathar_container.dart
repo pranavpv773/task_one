@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:marlo_app/app/utils/app_colors.dart';
 
 class RectContainer extends StatelessWidget {
   const RectContainer({
@@ -18,12 +20,21 @@ class RectContainer extends StatelessWidget {
       width: width ?? 50,
       height: height ?? 40,
       decoration: BoxDecoration(
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(
+            10,
+          ),
+        ),
         color: color,
       ),
       child: Center(
         child: Text(
           title,
+          style: TextStyle(
+            color: AppColors.klight,
+            fontFamily: GoogleFonts.basic().fontFamily,
+            fontStyle: FontStyle.normal,
+          ),
         ),
       ),
     );
