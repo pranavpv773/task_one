@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_one/screen_one.dart';
 import 'package:marlo_app/app/features/loan/loan_screen.dart';
+import 'package:marlo_app/app/features/new_dashboard/bloc/balance_bloc.dart';
 import 'package:marlo_app/app/features/new_dashboard/presentation/dasboard_new.dart';
 import 'package:marlo_app/app/features/teams/presentation/teams.dart';
 import '../../home/presentation/home.dart';
@@ -21,6 +22,11 @@ class GlobalScreen extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback(
+      (timeStamp) {
+        context.read<BalanceBloc>().add(const FetchBalance());
+      },
+    );
     return Scaffold(
       body: BlocBuilder<GlobalBloc, GlobalState>(
         builder: (context, state) {

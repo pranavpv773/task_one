@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iconify_flutter/iconify_flutter.dart';
-import 'package:iconify_flutter/icons/uil.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_one/widgets/row_title_widget.dart';
-import 'package:marlo_app/app/features/dashboard/presentation/widgets/transaction_card.dart';
 import 'package:marlo_app/app/features/new_dashboard/bloc/balance_bloc.dart';
 import 'package:marlo_app/app/features/new_dashboard/infrastructure/dashboard_utils.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
 import 'package:marlo_app/app/utils/app_styles.dart';
+import 'package:marlo_app/app/utils/app_theme/app_themes.dart';
 
 import 'widgets/currency_card.dart';
 import 'widgets/heading_section.dart';
@@ -20,11 +18,6 @@ class DashBoardNew extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback(
-      (timeStamp) {
-        context.read<BalanceBloc>().add(const FetchBalance());
-      },
-    );
     return SafeArea(
       child: Scaffold(
         appBar: const PreferredSize(
@@ -56,7 +49,7 @@ class DashBoardNew extends StatelessWidget {
                   children: List.generate(
                     3,
                     (index) => Card(
-                      color: AppColors.klightBlue,
+                      //  color: AppColors.klightBlue,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -71,8 +64,10 @@ class DashBoardNew extends StatelessWidget {
                             begin: Alignment.topLeft,
                             end: Alignment.center,
                             colors: [
-                              AppColors.klight.withAlpha(10),
-                              DashBoardUtils().colorList[index].withAlpha(40),
+                              MyThemes == MyThemeKeys.LIGHT
+                                  ? AppColors.klight.withAlpha(10)
+                                  : AppColors.secondary,
+                              DashBoardUtils().colorList[index].withAlpha(60),
                             ],
                           ),
                         ),
@@ -84,7 +79,7 @@ class DashBoardNew extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              SizedBox(),
+                              const SizedBox(),
                               CircleAvatar(
                                 radius: 30.w,
                                 backgroundColor:

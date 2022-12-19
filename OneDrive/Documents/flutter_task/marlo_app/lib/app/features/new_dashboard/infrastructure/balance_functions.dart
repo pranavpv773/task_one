@@ -20,15 +20,21 @@ class BalanceFunctions implements BalanceApiServices {
         final result = BalanceModel.fromJson(response.data);
         return result.datas;
       } else {
-        log('===================================== SomeThing Wrong ====== BalanceService==================');
+        log(
+          '===================================== SomeThing Wrong ====== BalanceService==================',
+        );
         return [];
       }
     } on DioError catch (e) {
-      log('===================================== Dio Error ====== BalanceService==================');
+      log(
+        '===================================== Dio Error ====== BalanceService==================',
+      );
       log(e.toString());
       return [];
     } catch (e) {
-      log('===================================== catch Error ====== BalanceService==================');
+      log(
+        '===================================== catch Error ====== BalanceService==================',
+      );
       log(e.toString());
       return [];
     }

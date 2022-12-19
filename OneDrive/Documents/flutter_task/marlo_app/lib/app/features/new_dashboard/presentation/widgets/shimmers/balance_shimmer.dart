@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
 import 'package:shimmer/shimmer.dart';
@@ -11,7 +9,7 @@ class BalanceShimmerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
+    //final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: Column(

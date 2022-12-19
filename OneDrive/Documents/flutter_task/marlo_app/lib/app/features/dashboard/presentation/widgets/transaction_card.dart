@@ -24,7 +24,7 @@ class TransactionCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(5.r),
       ),
       width: 200,
-      height: 100,
+      height: 62.h,
       child: Center(
         child: ListTile(
           leading: Container(

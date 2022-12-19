@@ -19,6 +19,12 @@ class CurrencyCard extends StatelessWidget {
       height: 140.h,
       child: BlocBuilder<BalanceBloc, BalanceState>(
         builder: (context, state) {
+          if (state.isError) {
+            return Container(
+              height: 60,
+              child: Image.asset("assets/401.png"),
+            );
+          }
           if (state.isLoading) {
             return const BalanceShimmerCard();
           }
@@ -53,7 +59,7 @@ class CurrencyCard extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Container(
-                            height: 60,
+                            height: 48,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: AppColors.secondary.withOpacity(0.1),
@@ -65,8 +71,8 @@ class CurrencyCard extends StatelessWidget {
                               SelectFlag().flagsCode(state
                                   .balanceList[index].currencyCodeIso2
                                   .toString())!,
-                              height: 60,
-                              width: 60,
+                              height: 48,
+                              width: 48,
                               fit: BoxFit.cover,
                               borderRadius: 50,
                             ),
@@ -85,7 +91,7 @@ class CurrencyCard extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(
-                                height: 5.h,
+                                height: 2.h,
                               ),
                               Text(
                                 state.balanceList[index].currency.toString(),

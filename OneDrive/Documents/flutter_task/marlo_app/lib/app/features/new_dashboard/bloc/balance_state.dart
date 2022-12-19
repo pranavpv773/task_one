@@ -8,5 +8,5 @@ class BalanceState with _$BalanceState {
     required bool isError,
   }) = _BalanceState;
   factory BalanceState.initial() =>
-      const BalanceState(balanceList: [], isLoading: false, isError: false);
+      const BalanceState(balanceList: [], isLoading: true, isError: false);
 }

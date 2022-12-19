@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
 
@@ -17,12 +18,12 @@ class RectContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width ?? 50,
-      height: height ?? 40,
+      width: width ?? 32.w,
+      height: height ?? 32.h,
       decoration: BoxDecoration(
-        borderRadius: const BorderRadius.all(
+        borderRadius: BorderRadius.all(
           Radius.circular(
-            10,
+            10.r,
           ),
         ),
         color: color,

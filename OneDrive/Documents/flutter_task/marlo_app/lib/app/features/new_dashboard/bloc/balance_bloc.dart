@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'dart:developer';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -20,10 +22,11 @@ class BalanceBloc extends Bloc<BalanceEvent, BalanceState> {
     });
     on<FetchBalance>((event, emit) async {
       log('Balance Bloc called');
-      //  if (state.balanceList.isNotEmpty) {
-      //    emit(state.copyWith(isLoading: false,balanceList: state.balanceList ));
-      //    return;
-      //  }
+      if (state.isError) {
+        log("------------error-----------");
+        emit(state.copyWith(isError: true));
+        return;
+      }
       emit(state.copyWith(
           isLoading: true, balanceList: state.balanceList, isError: false));
       List<Datum>? balanceNewList =

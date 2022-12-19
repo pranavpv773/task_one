@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:marlo_app/app/features/contract/presentation/screen_one/widgets/rect_avathar_container.dart';
 import 'package:marlo_app/app/utils/app_colors.dart';
@@ -21,7 +22,7 @@ class HeadingSection extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.notifications,
+              CupertinoIcons.bell_fill,
               color: AppColors.primary,
             ),
           ),
